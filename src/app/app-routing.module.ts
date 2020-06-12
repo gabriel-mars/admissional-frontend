@@ -1,7 +1,7 @@
-import { ProfessorCrudComponent } from './components/template/views/professor-crud/professor-crud.component';
+import { ProfessorReadComponent } from './components/template/professor/professor-read/professor-read.component';
+import { AlunoReadComponent } from './components/template/aluno/aluno-read/aluno-read.component';
 import { ProfessorCreateComponent } from './components/template/professor/professor-create/professor-create.component';
 import { AlunoCreateComponent } from './components/template/aluno/aluno-create/aluno-create.component';
-import { AlunoCrudComponent } from './components/template/views/aluno-crud/aluno-crud.component';
 import { HomeComponent } from './components/template/views/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: "aluno",
-    component: AlunoCrudComponent
+    component: AlunoReadComponent
   },
   {
     path: "aluno/create",
@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: "professor",
-    component: ProfessorCrudComponent
+    component: ProfessorReadComponent
   },
   {
     path: "professor/create",

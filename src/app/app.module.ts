@@ -7,9 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/template/views/home/home.component';
-import { AlunoCrudComponent } from './components/template/views/aluno-crud/aluno-crud.component';
-import { ProfessorCrudComponent } from './components/template/views/professor-crud/professor-crud.component';
-import { TurmaCrudComponent } from './components/template/views/turma-crud/turma-crud.component';
 import { AlunoCreateComponent } from './components/template/aluno/aluno-create/aluno-create.component';
 import { AlunoReadComponent } from './components/template/aluno/aluno-read/aluno-read.component';
 import { AlunoUpdateComponent } from './components/template/aluno/aluno-update/aluno-update.component';
@@ -37,9 +34,6 @@ import { MessageService } from 'primeng/api';
     AppComponent,
     NavComponent,
     HomeComponent,
-    AlunoCrudComponent,
-    ProfessorCrudComponent,
-    TurmaCrudComponent,
     AlunoCreateComponent,
     AlunoReadComponent,
     AlunoUpdateComponent,
