@@ -26,7 +26,7 @@ export class NavComponent implements OnInit {
         {
             label: 'Professor',
             items: [
-                {label: 'Cadastrar professor', routerLink: ['/']},
+                {label: 'Cadastrar professor', routerLink: ['/professor/create']},
                 {label: 'Listar professores', routerLink: ['/']}
             ]
         },
