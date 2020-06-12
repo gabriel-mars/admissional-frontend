@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class AlunoService {
 
-  baseUrl = "http://localhost:8080/alunos";
+  baseUrl = "http://localhost:8080/aluno";
 
   constructor(private http: HttpClient) { }
 
