@@ -27,7 +27,7 @@ export class ProfessorCreateComponent implements OnInit {
 
   cadastrarProfessor(): void {
     this.professorService.cadastrarProfessor(this.professor).subscribe(() => {
-      this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Aluno cadastrado.'})
+      this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Professor cadastrado.'})
       this.router.navigate(['/professor/create']);
     });
   }
