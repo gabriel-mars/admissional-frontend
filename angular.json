@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "admissional"
+    }
+  },
+  "defaultProject": "admissional",
+  "cli": {
+    "analytics": false
+  }
 }

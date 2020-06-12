@@ -2,6 +2,7 @@ import { AlunoService } from './../../../../services/aluno.service';
 import { Aluno } from './../../../../models/aluno.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-aluno-create',
@@ -16,14 +17,16 @@ export class AlunoCreateComponent implements OnInit {
   }
   constructor(
     private alunoService: AlunoService,
-    private router: Router) { }
+    private router: Router,
+    private messageService: MessageService) { }
 
   ngOnInit(): void {
   }
 
   matricularAluno(): void {
     this.alunoService.matricularAluno(this.aluno).subscribe(() => {
-      this.router.navigate(['']);
+      this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Aluno cadastrado.'})
+      this.router.navigate(['/aluno/create']);
     });
   }
 
