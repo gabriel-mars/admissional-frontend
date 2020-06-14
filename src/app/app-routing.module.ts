@@ -1,3 +1,4 @@
+import { TurmaCreateComponent } from './components/template/turma/turma-create/turma-create.component';
 import { ProfessorReadComponent } from './components/template/professor/professor-read/professor-read.component';
 import { AlunoReadComponent } from './components/template/aluno/aluno-read/aluno-read.component';
 import { ProfessorCreateComponent } from './components/template/professor/professor-create/professor-create.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "professor/create",
     component: ProfessorCreateComponent
+  },
+  {
+    path: "turma/create",
+    component: TurmaCreateComponent
   }
 ];
 

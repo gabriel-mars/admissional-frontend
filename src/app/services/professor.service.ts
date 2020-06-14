@@ -24,6 +24,10 @@ export class ProfessorService {
     );
   }
 
+  read(): Observable<Professor[]>{
+    return this.http.get<Professor[]>(this.baseUrl);
+  }
+
   errorHandler(e: any): Observable<any> {
     this.messageService.add({severity:'error', summary: 'Ops', detail:'Não foi possível completar a ação.'});
     return EMPTY;
