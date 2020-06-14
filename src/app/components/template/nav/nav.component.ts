@@ -35,7 +35,7 @@ export class NavComponent implements OnInit {
             label: 'Turma',
             items: [
                 {label: 'Cadastrar turma', routerLink: ['/turma/create']},
-                {label: 'Listar turmas', routerLink: ['/']}
+                {label: 'Listar turmas', routerLink: ['/turma']}
             ]
         }
     ];

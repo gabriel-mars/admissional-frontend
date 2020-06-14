@@ -1,3 +1,5 @@
+import { TurmaService } from './../../../../services/turma.service';
+import { Turma } from './../../../../models/turma.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TurmaReadComponent implements OnInit {
 
-  constructor() { }
+  turmas: Turma[];
+
+  constructor(private turmaService: TurmaService) { }
 
   ngOnInit(): void {
+    this.turmaService.read().subscribe(turmas => {
+      this.turmas = turmas;
+    });
   }
 
 }

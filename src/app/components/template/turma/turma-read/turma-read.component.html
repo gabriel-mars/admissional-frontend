@@ -1,1 +1,20 @@
-<p>turma-read works!</p>
+<p-toast [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
+<div class="card-turma">
+    <h3 class="first">Turmas cadastrados</h3>
+    <p-table [value]="turmas">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>#</th>
+                <th>Código</th>
+                <th>Sala</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-turma>
+            <tr>
+                <td>{{turma.id}}</td>
+                <td>{{turma.codigo}}</td>
+                <td>{{turma.sala}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
