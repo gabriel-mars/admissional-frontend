@@ -4,7 +4,7 @@ export interface Turma {
     id?: number
     codigo: string
     sala: string
-    dataAbertura: Date
-    dataEncerramento: Date
+    dataAbertura: string
+    dataEncerramento: string
     professor?: Professor
 }

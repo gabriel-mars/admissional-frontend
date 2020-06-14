@@ -18,6 +18,11 @@ export class TurmaService {
   ) { }
 
   cadastrarTurma(turma: Turma): Observable<Turma> {
+    turma.dataAbertura = new Date(turma.dataAbertura).toLocaleDateString('pt-BR');
+    turma.dataEncerramento = new Date(turma.dataEncerramento).toLocaleDateString('pt-BR');
+    
+    console.log(turma);
+
     return this.http.post<Turma>(this.baseUrl, turma).pipe(
       map((obj) => obj),
       catchError(e => this.errorHandler(e))

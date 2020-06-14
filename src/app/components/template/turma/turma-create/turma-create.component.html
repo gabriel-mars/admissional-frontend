@@ -4,23 +4,23 @@
         <div class="div-inputs p-fluid p-formgrid p-grid">
             <div class="p-field p-col-12 p-md-6">
                 <span class="ui-float-label">
-                    <input id="nome" type="text" [(ngModel)] = "turma.codigo" name="nome" pInputText required> 
-                    <label for="nome">Código da turma</label>
+                    <input id="codigo" type="text" [(ngModel)] = "turma.codigo" name="codigo" pInputText required> 
+                    <label for="codigo">Código da turma</label>
                 </span>      
             </div>
             <div class="p-field p-col-12 p-md-6">
                 <span class="ui-float-label">
-                    <input id="titulacao" type="text" [(ngModel)] = "turma.sala" name="titulacao" pInputText required> 
-                    <label for="titulacao">Sala</label>
+                    <input id="sala" type="text" [(ngModel)] = "turma.sala" name="sala" pInputText required> 
+                    <label for="sala">Sala</label>
                 </span>
             </div>
             <div class="p-col-12 p-md-4">
-                <p-calendar id="abertura" [(ngModel)]="turma.dataAbertura" name="dataAbertura" showButtonBar="true" dateFormat="dd/mm/yy"></p-calendar>
-                <label for="abertura">Data de abertura</label>
+                <p-calendar id="dataAbertura" [(ngModel)]="turma.dataAbertura" name="dataAbertura" showButtonBar="true" dateFormat="dd/mm/yy"></p-calendar>
+                <label for="dataAbertura">Data de abertura</label>
             </div>
             <div class="p-col-12 p-md-4">
-                <p-calendar id="abertura" [(ngModel)]="turma.dataEncerramento" name="dataEncerramento" showButtonBar="true" dateFormat="dd/mm/yy"></p-calendar>
-                <label for="abertura">Data de encerramento</label>
+                <p-calendar id="dataEncerramento" [(ngModel)]="turma.dataEncerramento" name="dataEncerramento" showButtonBar="true" dateFormat="dd/mm/yy"></p-calendar>
+                <label for="dataEncerramento">Data de encerramento</label>
             </div>
             <div class="p-col-12 p-md-4">
                 <p-dropdown [options]="professores" [(ngModel)]="professor" placeholder="Selecione um professor" [showClear]="true"></p-dropdown>

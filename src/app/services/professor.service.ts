@@ -28,6 +28,14 @@ export class ProfessorService {
     return this.http.get<Professor[]>(this.baseUrl);
   }
 
+  readById(id: number): Observable<Professor>{
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Professor>(url).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    );
+  }
+
   errorHandler(e: any): Observable<any> {
     this.messageService.add({severity:'error', summary: 'Ops', detail:'Não foi possível completar a ação.'});
     return EMPTY;
