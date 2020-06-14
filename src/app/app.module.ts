@@ -31,6 +31,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { DropdownModule } from 'primeng/dropdown';
     InputTextModule,
     ToastModule,
     CalendarModule,
-    DropdownModule
+    DropdownModule,
+    TableModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

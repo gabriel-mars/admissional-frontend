@@ -19,7 +19,7 @@ export class NavComponent implements OnInit {
             label: 'Aluno',
             items: [
                 {label: 'Matricular aluno', routerLink: ['/aluno/create']},
-                {label: 'Listar alunos', routerLink: ['/']}
+                {label: 'Listar alunos', routerLink: ['/aluno']}
             ]
         },
         {separator:true},
@@ -27,7 +27,7 @@ export class NavComponent implements OnInit {
             label: 'Professor',
             items: [
                 {label: 'Cadastrar professor', routerLink: ['/professor/create']},
-                {label: 'Listar professores', routerLink: ['/']}
+                {label: 'Listar professores', routerLink: ['/professor']}
             ]
         },
         {separator:true},

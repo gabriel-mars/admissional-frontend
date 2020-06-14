@@ -24,6 +24,10 @@ export class AlunoService {
     );
   }
 
+  read(): Observable<Aluno[]>{
+    return this.http.get<Aluno[]>(this.baseUrl);
+  }
+
   errorHandler(e: any): Observable<any> {
     this.messageService.add({severity:'error', summary: 'Ops', detail:'Não foi possível completar a ação.'})
     return EMPTY;

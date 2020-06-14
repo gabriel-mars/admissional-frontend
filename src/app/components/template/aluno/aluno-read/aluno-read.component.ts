@@ -1,3 +1,5 @@
+import { AlunoService } from './../../../../services/aluno.service';
+import { Aluno } from './../../../../models/aluno.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlunoReadComponent implements OnInit {
 
-  constructor() { }
+  alunos: Aluno[];
+
+  constructor(private alunoService: AlunoService) { }
 
   ngOnInit(): void {
+    this.alunoService.read().subscribe(alunos => {
+      this.alunos = alunos;
+    });
   }
-
 }
