@@ -1,3 +1,5 @@
+import { Professor } from './../../../../models/professor.model';
+import { ProfessorService } from './../../../../services/professor.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfessorReadComponent implements OnInit {
 
-  constructor() { }
+  professores: Professor[];
+
+  constructor(private professorService: ProfessorService) { }
 
   ngOnInit(): void {
+    this.professorService.read().subscribe(professores => {
+      this.professores = professores;
+    });
   }
-
 }

@@ -1,1 +1,20 @@
-<p>professor-read works!</p>
+<p-toast [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
+<div class="card-professor">
+    <h3 class="first">Professores cadastrados</h3>
+    <p-table [value]="professores">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Titulação</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-professor>
+            <tr>
+                <td>{{professor.id}}</td>
+                <td>{{professor.nome}}</td>
+                <td>{{professor.titulacao}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
