@@ -1,3 +1,4 @@
+import { AlunoService } from './../../../../services/aluno.service';
 import { Professor } from './../../../../models/professor.model';
 import { MessageService, SelectItem } from 'primeng/api';
 import { ProfessorService } from './../../../../services/professor.service';
@@ -15,17 +16,18 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class TurmaUpdateComponent implements OnInit {
 
   turma: Turma;
+
   alunos: Aluno[];
+  selectedAlunos: Aluno[];
 
   status: Boolean;
   turmaAberta: string;
 
-  professores: SelectItem[];
   professor: Professor;
 
   constructor(
     private turmaService: TurmaService,
-    private professorService: ProfessorService,
+    private alunoService: AlunoService,
     private messageService: MessageService,
     private router: Router,
     private route: ActivatedRoute
@@ -49,16 +51,18 @@ export class TurmaUpdateComponent implements OnInit {
       }
     });
 
-    this.professores = [];
-    this.professorService.read().subscribe(professores => {
-      professores.forEach(professor => {
-        this.professores.push({label: `${professor.nome}`, value: `${professor.id}`});
-      });
+    this.alunoService.read().subscribe(alunos => {
+      this.alunos = alunos;
     });
   }
 
   adicionarAlunos(): void {
-    console.log(this.turma.id);
+    this.turma.alunos = this.selectedAlunos;
+    
+    this.turmaService.addAluno(this.turma).subscribe(() => {
+      this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Alunos adicionados.'})
+      this.router.navigate(['/turma']);
+    })
   }
 
   cancelar(): void {

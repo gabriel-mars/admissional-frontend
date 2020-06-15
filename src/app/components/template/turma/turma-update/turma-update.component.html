@@ -10,6 +10,13 @@
     <br/>
     <p-card header="Adicionar alunos" [style]="{width: '100%'}" styleClass="ui-card-shadow">
         
+        <br/>
+
+        <p-listbox [options]="alunos" [(ngModel)]="selectedAlunos" [multiple]="true" [checkbox]="true" [filter]="true" optionLabel="nome" [style]='{"width":"100%"}'>
+            <p-header>
+              Alunos sem turma
+            </p-header>
+        </p-listbox>
 
         <p-footer>
             <button pButton type="button" (click)="adicionarAlunos()" label="Adicionar" class="ui-button-raised"></button>

@@ -21,8 +21,6 @@ export class TurmaService {
     turma.dataAbertura = new Date(turma.dataAbertura).toLocaleDateString('pt-BR');
     turma.dataEncerramento = new Date(turma.dataEncerramento).toLocaleDateString('pt-BR');
     
-    console.log(turma);
-
     return this.http.post<Turma>(this.baseUrl, turma).pipe(
       map((obj) => obj),
       catchError(e => this.errorHandler(e))
@@ -45,6 +43,15 @@ export class TurmaService {
     const url = `${this.baseUrl}/status/${id}`;
 
     return this.http.get<Boolean>(url).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    );
+  }
+
+  addAluno(turma: Turma): Observable<Turma>{
+    const url = `${this.baseUrl}/alunos/${turma.id}`;
+
+    return this.http.put<Turma>(url, turma).pipe(
       map((obj) => obj),
       catchError(e => this.errorHandler(e))
     );

@@ -33,6 +33,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 import { FieldsetModule } from 'primeng/fieldset';
+import { ListboxModule } from 'primeng/listbox';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { FieldsetModule } from 'primeng/fieldset';
     CalendarModule,
     DropdownModule,
     TableModule,
-    FieldsetModule
+    FieldsetModule,
+    ListboxModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
