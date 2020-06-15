@@ -1,27 +1,32 @@
 # Admissional
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+Este projeto faz parte do teste admissional para a empresa B2ml, que consiste em uma aplicação web.
+O projeto foi desenvolvido em duas frentes: Front-end e Back-end.
 
-## Development server
+## Front-end
+
+Desenvolvido com [Angular 9](https://angular.io) e [PrimeNG](https://www.primefaces.org/primeng/showcase/#/).
+
+É importante ressaltar que o front-end só funcionará corretamente caso back-end já esteja rodando, pois os dois se complementam.
+
+Para mais informações sobre o back-end, clique [aqui](https://github.com/gabrielrms-Inatel/admissional-backend).
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Inicializando o projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Após inicializar o back-end, siga os passos abaixo:
 
-## Build
+1- Entre no diretório onde foi clonado este repositório e abra um terminal.
+2- Execute o comando `npm install`.
+    Este comando irá instalar as dependências necessárias para o projeto.
+3- Após o comando anterior ser finalizado execute o comando `npm start`.
+    Este comando irá compilar o projeto e após aparecer a mensagem de sucesso, siga para o próximo passo.
+4- Vá para o seu navegador e acesse o endereço `http://localhost:4200/`.
+5- Se tudo estiver correto, o projeto já estará rodando.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Dependência
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+A única dependência para a execução deste projeto é já ter instalado o npm em sua máquina.
+Para verificar a instalação, abra um terminal e digite o comando `npm -v`.
+Caso o comando apresente uma falha, basta instalar o [Node](https://nodejs.org/en/) de acordo com sua plataforma.
