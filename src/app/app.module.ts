@@ -10,10 +10,6 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/template/views/home/home.component';
 import { AlunoCreateComponent } from './components/template/aluno/aluno-create/aluno-create.component';
 import { AlunoReadComponent } from './components/template/aluno/aluno-read/aluno-read.component';
-import { AlunoUpdateComponent } from './components/template/aluno/aluno-update/aluno-update.component';
-import { AlunoDeleteComponent } from './components/template/aluno/aluno-delete/aluno-delete.component';
-import { ProfessorDeleteComponent } from './components/template/professor/professor-delete/professor-delete.component';
-import { ProfessorUpdateComponent } from './components/template/professor/professor-update/professor-update.component';
 import { ProfessorReadComponent } from './components/template/professor/professor-read/professor-read.component';
 import { ProfessorCreateComponent } from './components/template/professor/professor-create/professor-create.component';
 import { TurmaCreateComponent } from './components/template/turma/turma-create/turma-create.component';
@@ -42,10 +38,6 @@ import { TurmaReadAlunosComponent } from './components/template/turma/turma-read
     HomeComponent,
     AlunoCreateComponent,
     AlunoReadComponent,
-    AlunoUpdateComponent,
-    AlunoDeleteComponent,
-    ProfessorDeleteComponent,
-    ProfessorUpdateComponent,
     ProfessorReadComponent,
     ProfessorCreateComponent,
     TurmaCreateComponent,

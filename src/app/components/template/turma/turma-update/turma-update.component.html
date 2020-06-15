@@ -1,4 +1,5 @@
 <p-toast [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
+<button pButton type="button" (click)="cancelar()" label="Turmas" class="ui-button-raised"></button>
 <div class="card-turma" *ngIf="turma?.codigo">
     <p-fieldset legend="Código da turma: {{ turma.codigo }}">
         <p><strong>Sala: </strong>{{ turma.sala }}</p>

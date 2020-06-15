@@ -23,18 +23,30 @@ export class AlunoCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Método para matricular um aluno
   matricularAluno(): void {
-    this.alunoService.matricularAluno(this.aluno).subscribe(() => {
-      this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Aluno cadastrado.'})
 
-      this.aluno.nome = '';
-      this.aluno.matricula = '';
-
-      this.router.navigate(['/aluno/create']);
-    });
+    // Verificação dos inputs do formulário
+    // Caso estejam preenchidos, o processo continua.
+    if (this.aluno.nome === '' || this.aluno.matricula === '' ||
+        this.aluno.nome == null || this.aluno.matricula == null) {
+          
+      this.messageService.add({severity:'warn', summary: 'Atenção!', detail:'Preencha todos os campos.'})
+    } else {
+      
+      this.alunoService.matricularAluno(this.aluno).subscribe(() => {
+        this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Aluno cadastrado.'})
+  
+        this.aluno.nome = '';
+        this.aluno.matricula = '';
+  
+        this.router.navigate(['/aluno/create']);
+      });
+    }
   }
 
-  cancelar(): void {
+  // Método para cancelar a matrícula e retornar para a lista de alunos.
+  cancel(): void {
     this.router.navigate(['/aluno']);
   }
 }

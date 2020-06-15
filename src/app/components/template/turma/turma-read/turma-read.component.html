@@ -1,6 +1,7 @@
 <p-toast [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
+<button pButton type="button" (click)="createTurma()" label="Cadastrar turma" class="ui-button-raised"></button>
 <div class="card-turma">
-    <h3 class="first">Turmas cadastrados</h3>
+    <h3 class="first">Turmas cadastradas</h3>
     <p-table [value]="turmas">
         <ng-template pTemplate="header">
             <tr>

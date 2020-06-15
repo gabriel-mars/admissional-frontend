@@ -1,3 +1,11 @@
 .card-professor{
     padding-top: 15px;
 }
+
+.first {
+    font-family: sans-serif;
+}
+
+button {
+    margin: 20px 15px 0px 0px;
+}

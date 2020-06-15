@@ -1,18 +1,15 @@
 <p-toast [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
+<button pButton type="button" (click)="cancelar()" label="Professores" class="ui-button-raised"></button>
 <div class="card-professor">
     <p-card header="Novo professor" [style]="{width: '100%'}" styleClass="ui-card-shadow">
-        <div class="div-inputs p-fluid p-formgrid p-grid">
+        <div class="ui-fluid p-formgrid p-grid">
             <div class="p-field p-col-12 p-md-6">
-                <span class="ui-float-label">
-                    <input id="nome" type="text" [(ngModel)] = "professor.nome" name="nome" pInputText required> 
-                    <label for="nome">Nome do professor</label>
-                </span>      
+                <label for="nome">Nome do professor</label>
+                <input id="nome" type="text" [(ngModel)] = "professor.nome" name="nome" pInputText required> 
             </div>
             <div class="p-field p-col-12 p-md-6">
-                <span class="ui-float-label">
-                    <input id="titulacao" type="text" [(ngModel)] = "professor.titulacao" name="titulacao" pInputText required> 
-                    <label for="titulacao">Titulação</label>
-                </span>
+                <label for="titulacao">Titulação</label>
+                <input id="titulacao" type="text" [(ngModel)] = "professor.titulacao" name="titulacao" pInputText required> 
             </div>
         </div>
 

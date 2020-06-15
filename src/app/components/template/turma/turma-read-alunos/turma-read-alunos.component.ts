@@ -27,19 +27,21 @@ export class TurmaReadAlunosComponent implements OnInit {
   constructor(
     private turmaService: TurmaService,
     private alunoService: AlunoService,
-    private messageService: MessageService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
+  // Inicialização dos componentes necessários com os dados retornados pelo WebService
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get("id");
 
+    // Carregando os dados da turma
     this.turmaService.readById(id).subscribe((turma) => {
       this.turma = turma;
       this.professor = turma.professor;
     });
 
+    // Verificando o status da turma
     this.turmaService.checkStatus(id).subscribe(status => {
       this.status = status;
 
@@ -50,12 +52,13 @@ export class TurmaReadAlunosComponent implements OnInit {
       }
     });
 
+    // Carregando os alunos da turma
     this.alunoService.readByTurma(id).subscribe(alunos => {
       this.alunos = alunos;
-      console.log(alunos);
     });
   }
 
+  // Método para cancelar a operação e retornar a lista de turmas.
   cancelar(): void {
     this.router.navigate(['/turma']);
   }

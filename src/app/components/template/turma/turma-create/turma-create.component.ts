@@ -29,6 +29,7 @@ export class TurmaCreateComponent implements OnInit {
     private messageService: MessageService,
     private router: Router) {}
 
+  // Inicialização dos componentes necessários
   ngOnInit(): void {
     this.professores = [];
     this.professorService.read().subscribe(professores => {
@@ -38,27 +39,39 @@ export class TurmaCreateComponent implements OnInit {
     });
   }
 
+  // Método para o cadastro de uma nova turma
   cadastrarTurma(): void {
     this.turma.professor = this.professor;
     const id = +this.turma.professor;
 
-    this.professorService.readById(id).subscribe((professor) => {
-      this.professor = professor;
-      this.turma.professor = this.professor;
-
-      this.turmaService.cadastrarTurma(this.turma).subscribe(() => {
-        this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Turma cadastrada.'})
-
-        this.turma.codigo = '';
-        this.turma.sala = '';
-        this.turma.dataAbertura = '';
-        this.turma.dataEncerramento = '';
-
-        this.router.navigate(['/turma/create']);
+    // Verificação dos inputs do formulário
+    // Caso todos estejam preenchidos, o processo continua.
+    if (this.turma.codigo === '' || this.turma.sala === '' ||
+        this.turma.codigo == null || this.turma.sala == null ||
+        this.turma.dataAbertura === '' || this.turma.dataEncerramento === '' ||
+        this.turma.dataAbertura == null || this.turma.dataEncerramento == null) {
+          
+          this.messageService.add({severity:'warn', summary: 'Atenção!', detail:'Preencha todos os campos.'})
+    } else {
+      this.professorService.readById(id).subscribe((professor) => {
+        this.professor = professor;
+        this.turma.professor = this.professor;
+  
+        this.turmaService.cadastrarTurma(this.turma).subscribe(() => {
+          this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Turma cadastrada.'})
+  
+          this.turma.codigo = '';
+          this.turma.sala = '';
+          this.turma.dataAbertura = '';
+          this.turma.dataEncerramento = '';
+  
+          this.router.navigate(['/turma/create']);
+        });
       });
-    });
+    }
   }
 
+  // Método para cancelar o cadastro retornar para a lista das turmas
   cancelar(): void {
     this.router.navigate(['/turma']);
   }
