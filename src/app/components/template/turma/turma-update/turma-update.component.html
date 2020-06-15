@@ -1,1 +1,19 @@
-<p>turma-update works!</p>
+<p-toast [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
+<div class="card-turma" *ngIf="turma?.codigo">
+    <p-fieldset legend="Código da turma: {{ turma.codigo }}">
+        <p><strong>Sala: </strong>{{ turma.sala }}</p>
+        <p><strong>Status da turma: </strong>{{ turmaAberta }}</p>
+        <br/>
+        <p><strong>Professor: </strong>{{ professor.nome }}</p>
+        <p><strong>Titulação do professor: </strong>{{ professor.titulacao }}</p>
+    </p-fieldset>
+    <br/>
+    <p-card header="Adicionar alunos" [style]="{width: '100%'}" styleClass="ui-card-shadow">
+        
+
+        <p-footer>
+            <button pButton type="button" (click)="adicionarAlunos()" label="Adicionar" class="ui-button-raised"></button>
+            <button pButton type="button" (click)="cancelar()" label="Cancelar" class="ui-button-raised ui-button-secondary"></button>
+        </p-footer>
+    </p-card>
+</div>

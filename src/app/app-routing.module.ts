@@ -1,3 +1,4 @@
+import { TurmaUpdateComponent } from './components/template/turma/turma-update/turma-update.component';
 import { TurmaReadComponent } from './components/template/turma/turma-read/turma-read.component';
 import { TurmaCreateComponent } from './components/template/turma/turma-create/turma-create.component';
 import { ProfessorReadComponent } from './components/template/professor/professor-read/professor-read.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: "turma/create",
     component: TurmaCreateComponent
+  },
+  {
+    path: "turma/alunos/:id",
+    component: TurmaUpdateComponent
   }
 ];
 

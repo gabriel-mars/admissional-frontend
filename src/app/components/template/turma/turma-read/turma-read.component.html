@@ -7,6 +7,7 @@
                 <th>#</th>
                 <th>Código</th>
                 <th>Sala</th>
+                <th>Ações</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-turma>
@@ -14,6 +15,9 @@
                 <td>{{turma.id}}</td>
                 <td>{{turma.codigo}}</td>
                 <td>{{turma.sala}}</td>
+                <td>
+                    <a routerLink="/turma/alunos/{{ turma.id }}" pButton type="button" icon="pi pi-plus" label=" Adicionar Aluno" class="ui-button-rounded ui-button-success"></a>
+                </td>
             </tr>
         </ng-template>
     </p-table>

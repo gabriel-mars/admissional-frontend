@@ -33,6 +33,23 @@ export class TurmaService {
     return this.http.get<Turma[]>(this.baseUrl);
   }
 
+  readById(id: number): Observable<Turma>{
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Turma>(url).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    );
+  }
+
+  checkStatus(id: number): Observable<Boolean>{
+    const url = `${this.baseUrl}/status/${id}`;
+
+    return this.http.get<Boolean>(url).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    );
+  }
+
   errorHandler(e: any): Observable<any> {
     this.messageService.add({severity:'error', summary: 'Ops', detail:'Não foi possível completar a ação.'});
     return EMPTY;
