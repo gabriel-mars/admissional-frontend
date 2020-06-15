@@ -24,8 +24,17 @@ export class AlunoService {
     );
   }
 
-  read(): Observable<Aluno[]>{
+  read(): Observable<Aluno[]> {
     return this.http.get<Aluno[]>(this.baseUrl);
+  }
+
+  readByTurma(id: number): Observable<Aluno[]> {
+    const url = `${this.baseUrl}/turma/${id}`;
+
+    return this.http.get<Aluno>(url).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    );
   }
 
   errorHandler(e: any): Observable<any> {

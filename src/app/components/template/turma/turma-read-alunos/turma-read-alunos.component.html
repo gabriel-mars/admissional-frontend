@@ -8,13 +8,13 @@
         <p><strong>Titulação do professor: </strong>{{ professor.titulacao }}</p>
     </p-fieldset>
     <br/>
-    <p-card header="Adicionar alunos" [style]="{width: '100%'}" styleClass="ui-card-shadow">
+    <p-card header="Alunos" [style]="{width: '100%'}" styleClass="ui-card-shadow">
         
         <br/>
 
-        <p-listbox [options]="alunos" [(ngModel)]="selectedAlunos" [multiple]="true" [checkbox]="true" [filter]="true" optionLabel="nome" [style]='{"width":"100%"}'>
+        <p-listbox [options]="alunos" [(ngModel)]="selectedAlunos" [multiple]="true" [filter]="true" optionLabel="nome" [style]='{"width":"100%"}'>
             <p-header>
-              Alunos sem turma
+              Alunos adicionados à turma
             </p-header>
         </p-listbox>
 

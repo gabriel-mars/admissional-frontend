@@ -50,8 +50,9 @@ export class TurmaReadAlunosComponent implements OnInit {
       }
     });
 
-    this.alunoService.read().subscribe(alunos => {
+    this.alunoService.readByTurma(id).subscribe(alunos => {
       this.alunos = alunos;
+      console.log(alunos);
     });
   }
 
