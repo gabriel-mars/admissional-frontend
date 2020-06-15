@@ -37,6 +37,15 @@ export class AlunoService {
     );
   }
 
+  readByNoTurma(): Observable<Aluno[]> {
+    const url = `${this.baseUrl}/turma/not`;
+
+    return this.http.get<Aluno>(url).pipe(
+      map((obj) => obj),
+      catchError(e => this.errorHandler(e))
+    );
+  }
+
   errorHandler(e: any): Observable<any> {
     this.messageService.add({severity:'error', summary: 'Ops', detail:'Não foi possível completar a ação.'})
     return EMPTY;

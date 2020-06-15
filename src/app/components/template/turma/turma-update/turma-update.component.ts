@@ -51,7 +51,7 @@ export class TurmaUpdateComponent implements OnInit {
       }
     });
 
-    this.alunoService.read().subscribe(alunos => {
+    this.alunoService.readByNoTurma().subscribe(alunos => {
       this.alunos = alunos;
     });
   }
