@@ -19,7 +19,6 @@ import { ProfessorCreateComponent } from './components/template/professor/profes
 import { TurmaCreateComponent } from './components/template/turma/turma-create/turma-create.component';
 import { TurmaReadComponent } from './components/template/turma/turma-read/turma-read.component';
 import { TurmaUpdateComponent } from './components/template/turma/turma-update/turma-update.component';
-import { TurmaDeleteComponent } from './components/template/turma/turma-delete/turma-delete.component';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
@@ -50,8 +49,7 @@ import { ListboxModule } from 'primeng/listbox';
     ProfessorCreateComponent,
     TurmaCreateComponent,
     TurmaReadComponent,
-    TurmaUpdateComponent,
-    TurmaDeleteComponent
+    TurmaUpdateComponent
   ],
   imports: [
     BrowserModule,

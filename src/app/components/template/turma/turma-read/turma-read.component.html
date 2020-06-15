@@ -16,7 +16,8 @@
                 <td>{{turma.codigo}}</td>
                 <td>{{turma.sala}}</td>
                 <td>
-                    <a routerLink="/turma/alunos/{{ turma.id }}" pButton type="button" icon="pi pi-plus" label=" Adicionar Aluno" class="ui-button-rounded ui-button-success"></a>
+                    <a routerLink="/turma/alunos/{{ turma.id }}" pButton type="button" icon="pi pi-plus" label=" Adicionar alunos" class="ui-button-rounded ui-button-success"></a>
+                    <a routerLink="/turma/alunos/listar/{{ turma.id }}" pButton type="button" icon="pi pi-plus" label=" Ver alunos" class="ui-button-rounded ui-button-warning"></a>
                 </td>
             </tr>
         </ng-template>

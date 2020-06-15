@@ -11,8 +11,6 @@ Desenvolvido com [Angular 9](https://angular.io) e [PrimeNG](https://www.primefa
 
 Para mais informações sobre o back-end, clique [aqui](https://github.com/gabrielrms-Inatel/admissional-backend).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
 ## Inicializando o projeto
 
 Após inicializar o back-end, siga os passos abaixo:
