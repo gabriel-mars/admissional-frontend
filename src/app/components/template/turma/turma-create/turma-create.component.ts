@@ -48,7 +48,13 @@ export class TurmaCreateComponent implements OnInit {
 
       this.turmaService.cadastrarTurma(this.turma).subscribe(() => {
         this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Turma cadastrada.'})
-        this.router.navigate(['/turma']);
+
+        this.turma.codigo = '';
+        this.turma.sala = '';
+        this.turma.dataAbertura = '';
+        this.turma.dataEncerramento = '';
+
+        this.router.navigate(['/turma/create']);
       });
     });
   }

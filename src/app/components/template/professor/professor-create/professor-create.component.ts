@@ -28,12 +28,16 @@ export class ProfessorCreateComponent implements OnInit {
   cadastrarProfessor(): void {
     this.professorService.cadastrarProfessor(this.professor).subscribe(() => {
       this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Professor cadastrado.'})
+
+      this.professor.nome = '';
+      this.professor.titulacao = '';
+
       this.router.navigate(['/professor/create']);
     });
   }
 
   cancelar(): void{
-    this.router.navigate(['']);
+    this.router.navigate(['/professor']);
   }
 
 }

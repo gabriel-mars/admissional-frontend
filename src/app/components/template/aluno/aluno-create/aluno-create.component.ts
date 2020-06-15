@@ -26,11 +26,15 @@ export class AlunoCreateComponent implements OnInit {
   matricularAluno(): void {
     this.alunoService.matricularAluno(this.aluno).subscribe(() => {
       this.messageService.add({severity:'success', summary: 'Sucesso!', detail:'Aluno cadastrado.'})
+
+      this.aluno.nome = '';
+      this.aluno.matricula = '';
+
       this.router.navigate(['/aluno/create']);
     });
   }
 
   cancelar(): void {
-    this.router.navigate(['']);
+    this.router.navigate(['/aluno']);
   }
 }
