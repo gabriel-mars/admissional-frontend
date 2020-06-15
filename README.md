@@ -18,11 +18,15 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Após inicializar o back-end, siga os passos abaixo:
 
 1- Entre no diretório onde foi clonado este repositório e abra um terminal.
+
 2- Execute o comando `npm install`.
     Este comando irá instalar as dependências necessárias para o projeto.
+
 3- Após o comando anterior ser finalizado execute o comando `npm start`.
     Este comando irá compilar o projeto e após aparecer a mensagem de sucesso, siga para o próximo passo.
+
 4- Vá para o seu navegador e acesse o endereço `http://localhost:4200/`.
+
 5- Se tudo estiver correto, o projeto já estará rodando.
 
 ## Dependência
