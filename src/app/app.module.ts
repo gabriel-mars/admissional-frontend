@@ -33,6 +33,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 import { FieldsetModule } from 'primeng/fieldset';
 import { ListboxModule } from 'primeng/listbox';
+import { TurmaReadAlunosComponent } from './components/template/turma/turma-read-alunos/turma-read-alunos.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ListboxModule } from 'primeng/listbox';
     ProfessorCreateComponent,
     TurmaCreateComponent,
     TurmaReadComponent,
-    TurmaUpdateComponent
+    TurmaUpdateComponent,
+    TurmaReadAlunosComponent
   ],
   imports: [
     BrowserModule,

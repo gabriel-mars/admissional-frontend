@@ -1,0 +1,25 @@
+<p-toast [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
+<div class="card-turma" *ngIf="turma?.codigo">
+    <p-fieldset legend="Código da turma: {{ turma.codigo }}">
+        <p><strong>Sala: </strong>{{ turma.sala }}</p>
+        <p><strong>Status da turma: </strong>{{ turmaAberta }}</p>
+        <br/>
+        <p><strong>Professor: </strong>{{ professor.nome }}</p>
+        <p><strong>Titulação do professor: </strong>{{ professor.titulacao }}</p>
+    </p-fieldset>
+    <br/>
+    <p-card header="Adicionar alunos" [style]="{width: '100%'}" styleClass="ui-card-shadow">
+        
+        <br/>
+
+        <p-listbox [options]="alunos" [(ngModel)]="selectedAlunos" [multiple]="true" [checkbox]="true" [filter]="true" optionLabel="nome" [style]='{"width":"100%"}'>
+            <p-header>
+              Alunos sem turma
+            </p-header>
+        </p-listbox>
+
+        <p-footer>
+            <button pButton type="button" (click)="cancelar()" label="Voltar" class="ui-button-raised ui-button-secondary"></button>
+        </p-footer>
+    </p-card>
+</div>
